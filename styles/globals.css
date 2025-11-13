@@ -1,0 +1,76 @@
+/* Pretendard Font */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* Tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Theme tokens (Light/Dark) ===== */
+:root {
+  --bg: 0 0% 100%;
+  --fg: 210 5% 10%;
+  --card: 0 0% 98%;
+  --border: 0 0% 90%;
+  --accent: 263 83% 52%;
+  --accent-fg: 0 0% 100%;
+}
+
+.dark {
+  --bg: 0 0% 6.7%;
+  --fg: 210 20% 96%;
+  --card: 240 8% 12%;
+  --border: 240 6% 18%;
+  --accent: 263 83% 52%;
+  --accent-fg: 0 0% 100%;
+}
+
+/* ===== Base ===== */
+html, body, #__next {
+  height: 100%;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  font-family: 'Pretendard', system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', sans-serif;
+  background: #111111;
+  color: hsl(var(--fg));
+}
+
+/* ===== Utilities ===== */
+.container-page {
+  @apply mx-auto w-full max-w-3xl px-5 md:max-w-4xl lg:max-w-5xl;
+}
+
+.card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  @apply rounded-2xl shadow;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition;
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-fg));
+}
+
+.btn:hover { filter: brightness(1.05); }
+
+.btn-outline {
+  background: transparent;
+  color: hsl(var(--accent));
+  border: 1px solid hsl(var(--accent));
+}
+
+.btn-outline:hover { background: hsl(var(--accent) / .08); }
+
+input {
+  @apply w-full rounded-xl border px-3 py-2 outline-none transition;
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+}
+
+input:focus { box-shadow: 0 0 0 2px hsl(var(--accent) / .25); }

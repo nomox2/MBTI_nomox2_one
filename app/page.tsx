@@ -1848,7 +1848,7 @@ export default function HomePage() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-10 px-5 py-12">
       <section className="rounded-3xl border border-divider bg-[#1b1b1b] p-8 text-white shadow-2xl">
-        <p className="text-sm uppercase tracking-[0.4em] text-brand">OKKI MBTI LAB</p>
+        <p className="text-sm uppercase tracking-[0.4em] text-brand">Nomonomo Design Studio</p>
         <h1 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
           지금 바로 나의 심리 성향을 진단해보세요
         </h1>
